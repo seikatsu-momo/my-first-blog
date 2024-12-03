@@ -23,7 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 from django.core.management.utils import get_random_secret_key
 SECRET_KEY = get_random_secret_key()
-text = 'SECRET_KEY = \'{0}\''.format('secret_key')
 
 with open('local_settings.py', 'w') as f:
   print(text, file=f)
@@ -31,7 +30,7 @@ with open('local_settings.py', 'w') as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'seikatsu34momo.pythonanywhere.com']
+ALLOWED_HOSTS = ['seikatsu34momo.pythonanywhere.com']
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
