@@ -29,10 +29,9 @@ with open('local_settings.py', 'w') as f:
   print(text, file=f)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'seikatsu34momo.pythonanywhere.com']
-#['127.0.0.1', '.pythonanywhere.com']
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
