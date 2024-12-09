@@ -21,11 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-from django.core.management.utils import get_random_secret_key
+from ..local_settings import *
+
+from django.core.management.utils import get_random_secret_key # type: ignore
 SECRET_KEY = get_random_secret_key()
 
-with open('local_settings.py', 'w') as f:
-  print(text, file=f)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -133,6 +133,6 @@ STATIC_ROOT = BASE_DIR / 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 try:
-    from .local_settings import *
+    from ..local_settings import *
 except:
     pass
