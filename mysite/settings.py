@@ -28,7 +28,7 @@ SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = [ 'seikatsu34momo.pythonanywhere.com']
+ALLOWED_HOSTS = ['seikatsu34momo.pythonanywhere.com']
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
