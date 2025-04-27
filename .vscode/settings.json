@@ -2,5 +2,7 @@
     "python.analysis.extraPaths":[
         "C:\\\\Users\\KENSA2_7\\myproject1\\myvenv\\Lib\\site-packages"
     ],
-    "explorer.excludeGitIgnore": false
+    "explorer.excludeGitIgnore": false,
+    "search.useGlobalIgnoreFiles": false,
+    "search.useParentIgnoreFiles": false
 }
