@@ -30,7 +30,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['seikatsu34momo.pythonanywhere.com']
 
 #CSRF_COOKIE_SECURE = True 'CSRFトークン用のCookieがHTTPS接続でのみ送信されるように設定するオプション'
-SESSION_COOKIE_SECURE = True
+#SESSION_COOKIE_SECURE = True 'セッションクッキーを HTTPS 接続でのみ送信'
 
 
 # Application definition
