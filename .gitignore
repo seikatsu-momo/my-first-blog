@@ -1,0 +1,9 @@
+*.pyc
+*~git
+.vscode
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
+local_settins.py

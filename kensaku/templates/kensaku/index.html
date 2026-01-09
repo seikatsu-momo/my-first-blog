@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>検索エンジンweb版</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="page-header text-center">
+        <h1 class="text-primary"><a href="/">検索エンジンweb版</a></h1>
+    </div>
+
+    <div class="container" style="display:flex; justify-content:space-around; text-align:center;">
+        <a class="btn btn-primary" href="{% url 'find' %}">
+            <span class="glyphicon glyphicon-list-alt" style="font-size: 50px; color: white;"></span><br>
+            所見検索web版
+        </a>
+
+        <a class="btn btn-primary" href="{% url 'k_find' %}">
+            <span class="glyphicon glyphicon-picture" style="font-size: 50px; color: white;"></span><br>
+            型式検索web版
+        </a>
+    </div>
+</body>
+
+</html>
