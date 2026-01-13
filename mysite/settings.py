@@ -15,7 +15,7 @@ from django.core.management.utils import get_random_secret_key
 <<<<<<< HEAD
 #from .local_settings import *
 =======
-#from .local_settins import *
+#from .local_settings import *
 >>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
