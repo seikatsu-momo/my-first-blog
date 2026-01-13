@@ -3,16 +3,10 @@ from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportActionModelAdmin
 from import_export.formats import base_formats
-<<<<<<< HEAD
 from .models import Kensaku,Kensaku_Katasiki
 
 # Register your models here.
 
-=======
-from .models import Kensaku
-
-# Register your models here.
->>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c
 class KensakuResource(resources.ModelResource):
     class Meta:
         model = Kensaku
@@ -27,12 +21,7 @@ resource_class = KensakuResource
 
 
 class GuestAdmin(ImportExportActionModelAdmin):
-<<<<<<< HEAD
     list_display = ('id','Primary_Item','Tertiary_Item','Item_No','Check_Item','GL_importance',\
-=======
-    list_display = (
-                    'id','Primary_Item','Tertiary_Item','Item_No','Check_Item','GL_importance',\
->>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c
                   'M_GL_importance','Test_Item','Pic_need','Shoken_No','Shoken_Str',\
                   'Shoken_terms','Water_terms1','Handan1','Judge1','Water_terms2',\
                   'Handan2','Judge2','Tokutan','Tandoku','Gapei','Shoken_No08',\
@@ -42,7 +31,6 @@ class GuestAdmin(ImportExportActionModelAdmin):
                base_formats.XLS,\
                base_formats.XLSX]
 
-<<<<<<< HEAD
 class Kensaku_KtatasikiResource(resources.ModelResource):
     class Meta:
         model = Kensaku_Katasiki
@@ -62,7 +50,3 @@ admin.site.register(Kensaku,GuestAdmin)
 admin.site.register(Kensaku_Katasiki,GuestAdmin2)
 
 # Register your models here.
-=======
-
-admin.site.register(Kensaku,GuestAdmin)
->>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c

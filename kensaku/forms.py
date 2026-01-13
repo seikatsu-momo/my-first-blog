@@ -28,7 +28,6 @@ class KensakuForm(forms.Form):
     
 class FindForm(forms.Form):
         find=forms.CharField(label='所見文章検索（スペースを入れると２つまで検索可能）',required=False,\
-<<<<<<< HEAD
                              widget=forms.TextInput(attrs={'class':'form-control'}))
         
         find2=forms.CharField(label='条件文章検索（スペースを入れると２つまで検索可能）',required=False,\
@@ -36,6 +35,4 @@ class FindForm(forms.Form):
         
 class Katasiki_FindForm(forms.Form):
         K_find=forms.CharField(label='メーカー検索',required=False,\
-=======
->>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c
                              widget=forms.TextInput(attrs={'class':'form-control'}))
