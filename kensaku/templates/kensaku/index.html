@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0d6efd">
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/static/serviceworker.js');
+    }
+</script>
+
 <head>
     <meta charset="utf-8">
     <title>検索エンジンweb版</title>
