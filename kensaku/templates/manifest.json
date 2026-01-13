@@ -1,6 +1,6 @@
 {
-    "name": "My Django PWA",
-    "short_name": "DjangoPWA",
+    "name": "浄化槽関係検索エンジン",
+    "short_name": "検索エンジン",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
