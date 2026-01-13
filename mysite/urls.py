@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
@@ -39,3 +40,12 @@ if settings.DEBUG:
         settings.STATIC_URL,
         document_root=settings.STATICFILES_DIRS[0],
     )
+=======
+#import kensaku.views as kensaku
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',include('kensaku.urls'))
+]
+>>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c

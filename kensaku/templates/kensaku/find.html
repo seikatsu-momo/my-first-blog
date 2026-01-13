@@ -1,6 +1,7 @@
 {% load static %}
 <!doctype htmel>
 <html lang="ja">
+<<<<<<< HEAD
 
 <head>
     <meta charset="utf-8">
@@ -39,4 +40,42 @@
     </table>
 </body>
 
+=======
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.css"
+        rel="stylesheet" clossorigin="anonymous">
+    </head>
+    <body class="containar">
+        <h1 class="display-4 text-primary">
+            {{title}}</h1>
+        <p>{{message|safe}}</p>
+        <form action="{% url 'find' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="検索"
+            class="btn btn-primary">
+        </form>
+        <hr>
+        <table class="table table-bordered table-striped table-hover">
+            <tr>
+                <th>所見NO</th>
+                <th>検査項目</th>
+                <th>写真</th>
+                <th>所見文章</th>
+                <th>条件</th>
+            </tr>
+            {% for item in data %}
+            <tr>
+                <th>{{item.Shoken_No}}</th>
+                <td>{{item.Test_Item}}</td>
+                <td>{{item.Pic_need}}</td>
+                <td>{{item.Shoken_Str}}</td>
+                <td>{{item.Shoken_terms}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+>>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c
 </html>

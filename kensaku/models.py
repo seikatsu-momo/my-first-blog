@@ -15,10 +15,17 @@ class Kensaku(models.Model):
     Shoken_No=models.CharField(max_length=10)
     Shoken_Str=models.CharField(max_length=50)
     Shoken_terms=models.CharField(max_length=200)
+<<<<<<< HEAD
     Water_terms1=models.CharField(max_length=15)
     Handan1=models.CharField(max_length=10)
     Judge1=models.CharField(max_length=10)
     Water_terms2=models.CharField(max_length=15)
+=======
+    Water_terms1=models.CharField(max_length=10)
+    Handan1=models.CharField(max_length=10)
+    Judge1=models.CharField(max_length=10)
+    Water_terms2=models.CharField(max_length=10)
+>>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c
     Handan2=models.CharField(max_length=10)
     Judge2=models.CharField(max_length=10)
     Tokutan=models.IntegerField()
@@ -35,6 +42,7 @@ class Kensaku(models.Model):
     def __str__(self):
         return self.id
 '''
+<<<<<<< HEAD
 class Kensaku_Katasiki(models.Model):
     JLK_MEISYO = models.CharField(max_length=20)
     JLK_OEM_CD = models.CharField(max_length=20)
@@ -47,3 +55,5 @@ class Kensaku_Katasiki(models.Model):
         #self.published_date = timezone.now()
         self.save()
 
+=======
+>>>>>>> a337fb2a7f9fdba6e83f32597198a25237f90b9c
