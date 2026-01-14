@@ -14,9 +14,9 @@
 <head>
     <meta charset="utf-8">
     <title>検索エンジンweb版</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'static/kensaku/css/style.css' %}">
 </head>
 
 <body>
@@ -25,14 +25,14 @@
     </div>
 
     <div class="container" style="display:flex; justify-content:space-around; text-align:center;">
-        <a class="btn btn-primary" href="{% url 'find' %}">
-            <span class="glyphicon glyphicon-list-alt" style="font-size: 50px; color: white;"></span><br>
-            所見検索web版
+        <a class="btn btn-primary menu-btn" href="{% url 'find' %}">
+            <span class="glyphicon glyphicon-list-alt icon" style="font-size: 50px; color: white;"></span><br>
+            <span style="font-size: 20px;">所見検索web版</span>
         </a>
 
         <a class="btn btn-primary" href="{% url 'k_find' %}">
             <span class="glyphicon glyphicon-picture" style="font-size: 50px; color: white;"></span><br>
-            型式検索web版
+            <span style="font-size: 20px;">型式検索web版</span>
         </a>
     </div>
 </body>

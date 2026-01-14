@@ -29,3 +29,19 @@ a {
     color: black;
     text-decoration: none;
 }
+
+a.btn.menu-btn {
+    text-align: center;
+}
+
+a.btn.menu-btn .icon {
+    font-size: 50px;
+    color: white;
+    display: block;
+}
+
+a.btn.menu-btn .label {
+    font-size: 50px;
+    display: block;
+    line-height: 1.2;
+}
