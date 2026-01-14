@@ -131,8 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
+STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [BASE_DIR / "kensaku/static"]
 
 # Default primary key field type
@@ -145,4 +144,3 @@ try:
     from .local_settings import *
 except:
     pass
-
