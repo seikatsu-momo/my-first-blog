@@ -1,9 +1,21 @@
-*.pyc
-*~git
-.vscode
-__pycache__
-myvenv
+# Python
+__pycache__/
+*.py[cod]
+*~
+
+# Django
 db.sqlite3
-/static
-.DS_Store
+local_settings.py
 mysite/local_settings.py
+
+# Virtualenv
+myvenv/
+
+# Static files
+static/
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
