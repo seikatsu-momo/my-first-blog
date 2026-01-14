@@ -42,9 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kensaku.apps.KensakuConfig',
     'import_export',
-    'openpyxl',
+    'kensaku.apps.KensakuConfig',
 ]
 
 IMPORT_EXPORT_AVAILABLE_IMPORT_FORMATS = [
