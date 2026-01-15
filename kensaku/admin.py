@@ -28,7 +28,6 @@ class GuestAdmin(ImportExportActionModelAdmin):
                   'Shoken_Str08')
     
     formats = [base_formats.CSV,\
-               base_formats.XLS,\
                base_formats.XLSX]
 
 class Kensaku_KtatasikiResource(resources.ModelResource):
@@ -43,7 +42,6 @@ class GuestAdmin2(ImportExportActionModelAdmin):
     list_display = ('JLK_MEISYO','JLK_OEM_CD','JLK_SYORIMEI','JLK_SEINO','MAKER_NM','JLK_KATASIKI_LINK')
     
     formats = [base_formats.CSV,\
-               base_formats.XLS,\
                base_formats.XLSX]
 
 admin.site.register(Kensaku,GuestAdmin)

@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['seikatsu34momo.pythonanywhere.com']
 
@@ -47,11 +47,11 @@ INSTALLED_APPS = [
 ]
 
 IMPORT_EXPORT_AVAILABLE_IMPORT_FORMATS = [
-   'xlsx', 'xls', 'csv',
+   'xlsx', 'csv',
 ]
  
 IMPORT_EXPORT_AVAILABLE_EXPORT_FORMATS = [
-   'xls', 'xlsx', 'csv',
+   'xlsx', 'csv',
 ]
 
 MIDDLEWARE = [
