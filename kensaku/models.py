@@ -37,8 +37,8 @@ class Kensaku(models.Model):
 '''
 class Kensaku_Katasiki(models.Model):
     JLK_MEISYO = models.CharField(max_length=20)
-    JLK_OEM_CD = models.CharField(max_length=20)
-    JLK_SYORIMEI = models.CharField(max_length=50)
+    JLK_OEM_CD = models.CharField(max_length=20,null=True)
+    JLK_SYORIMEI = models.CharField(max_length=50,null=True)
     JLK_SEINO = models.CharField(max_length=50)
     MAKER_NM = models.CharField(max_length=30)
     JLK_KATASIKI_LINK = models.URLField(blank=True,null=True)

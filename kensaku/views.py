@@ -65,7 +65,7 @@ def katasiki_find(request):
         val=k_find.split()
         k_find_list = len(val)
         if (k_find_list == 1):
-            data=Kensaku_Katasiki.objects.filter(MAKER_NM__contains=val[0])
+            data=Kensaku_Katasiki.objects.filter(MAKER_NM__contains=val[0]).order_by('JLK_MEISYO')
             msg='検索結果: ' + str(data.count()) + '件'
         else:
             data=Kensaku_Katasiki.objects.all()
