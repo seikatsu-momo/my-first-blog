@@ -36,3 +36,5 @@ class FindForm(forms.Form):
 class Katasiki_FindForm(forms.Form):
         K_find=forms.CharField(label='メーカー検索',required=False,\
                              widget=forms.TextInput(attrs={'class':'form-control'}))
+        K_find2=forms.CharField(label='型式検索',required=False,\
+                             widget=forms.TextInput(attrs={'class':'form-control'}))

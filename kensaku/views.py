@@ -64,16 +64,25 @@ def katasiki_find(request):
         k_find=request.POST['K_find']
         val=k_find.split()
         k_find_list = len(val)
-        if (k_find_list == 1):
-            data=Kensaku_Katasiki.objects.filter(MAKER_NM__contains=val[0]).order_by('JLK_MEISYO')
+        k_find2=request.POST['K_find2']
+        val2=k_find2.split()
+        k_find_list2=len(val2)
+        if (k_find_list == 1 and k_find_list2==0):
+            data=Kensaku_Katasiki.objects.filter(MAKER_NM__contains=val[0]).order_by('MAKER_NM_INDEX','JLK_MEISYO')
+            msg='検索結果: ' + str(data.count()) + '件'
+        elif (k_find_list==0 and k_find_list2==1):
+            data=Kensaku_Katasiki.objects.filter(JLK_MEISYO__contains=val2[0]).order_by('MAKER_NM_INDEX','JLK_MEISYO')
+            msg='検索結果: ' + str(data.count()) + '件'
+        elif (k_find_list==1 and k_find_list2==1):
+            data=Kensaku_Katasiki.objects.filter(MAKER_NM__contains=val[0]).filter(JLK_MEISYO__contains=val2[0]).order_by('MAKER_NM_INDEX','JLK_MEISYO')
             msg='検索結果: ' + str(data.count()) + '件'
         else:
-            data=Kensaku_Katasiki.objects.all()
+            data=Kensaku_Katasiki.objects.all().order_by('MAKER_NM_INDEX','JLK_MEISYO')
             msg='検索結果: ' + str(data.count()) + '件'           
     else:
         msg='seach word...'
         form=Katasiki_FindForm()
-        data=Kensaku_Katasiki.objects.all()
+        data=Kensaku_Katasiki.objects.all().order_by('MAKER_NM_INDEX','JLK_MEISYO')
     params={
         'title':'検索エンジンWeb版',
         'message':msg,
