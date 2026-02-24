@@ -47,16 +47,20 @@ def find(request):
             data=Kensaku.objects.all()
             msg='検索結果: ' + str(data.count()) + '件'           
     else:
-        #msg='seach word...'
+        msg='検索件数'
         form=FindForm()
         data=Kensaku.objects.all()
+    if request.GET.get("tokutan") == "1":
+        data = Kensaku.objects.filter(Tokutan=1)
+        msg = f'検索結果: {data.count()}件'
     params={
         'title':'検索エンジンWeb版',
-        #'message':msg,
+        'message':msg,
         'form':form,
         'data':data,
     }
     return render(request,'kensaku/find.html',params)
+   
 
 def katasiki_find(request):
     if(request.method == 'POST'):
@@ -80,12 +84,12 @@ def katasiki_find(request):
             data=Kensaku_Katasiki.objects.all().order_by('MAKER_NM_INDEX','JLK_MEISYO')
             msg='検索結果: ' + str(data.count()) + '件'           
     else:
-        #msg='seach word...'
+        msg='検索件数'
         form=Katasiki_FindForm()
         data=Kensaku_Katasiki.objects.all().order_by('MAKER_NM_INDEX','JLK_MEISYO')
     params={
         'title':'検索エンジンWeb版',
-        #'message':msg,
+        'message':msg,
         'form':form,
         'data':data,
     }
