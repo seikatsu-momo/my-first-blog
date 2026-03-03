@@ -32,6 +32,11 @@ urlpatterns = [
             content_type='application/json',
         ),
     ),
+    path('serviceworker.js',
+         TemplateView.as_view(
+             template_name="serviceworker.js",
+             content_type='application/javascript'
+         )),
 ]
 
 if settings.DEBUG:

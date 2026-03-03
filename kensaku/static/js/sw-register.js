@@ -1,4 +1,4 @@
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('static/serviceworker.js');
+    navigator.serviceWorker.register('serviceworker.js');
 }
