@@ -7,7 +7,7 @@
 
 <script>
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/static/serviceworker.js');
+        navigator.serviceWorker.register('/serviceworker.js');
     }
 </script>
 
@@ -16,7 +16,7 @@
     <title>検索エンジンweb版</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'static/kensaku/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'kensaku/css/style.css' %}">
 </head>
 
 <body>
