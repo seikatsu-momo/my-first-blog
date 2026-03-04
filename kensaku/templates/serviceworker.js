@@ -29,8 +29,8 @@ self.addEventListener('install', e => {
         caches.open(CACHE).then(c =>
             c.addAll([
                 '/',
-                //'/static/js/main.js',
-                //'/static/css/style.css'
+                '/static/js/main.js',
+                '/static/kensaku/css/style.css'
             ])
         )
     );
