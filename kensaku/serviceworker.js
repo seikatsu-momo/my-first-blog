@@ -22,22 +22,39 @@ self.addEventListener('fetch', event => {
 
 
 //オフラインキャッシュ
-const CACHE = 'v1';
+const CACHE_NAME = "kensaku-v1";
 
-self.addEventListener('install', e => {
-    e.waitUntil(
-        caches.open(CACHE).then(c =>
-            c.addAll([
-                '/',
-                '/static/js/main.js',
-                '/static/css/style.css'
-            ])
-        )
+self.addEventListener("install", event => {
+    event.waitUntil(
+        caches.open(CACHE_NAME).then(cache => {
+            return cache.add("/");
+        })
     );
 });
 
-self.addEventListener('fetch', e => {
-    e.respondWith(
-        caches.match(e.request).then(r => r || fetch(e.request))
+self.addEventListener("fetch", event => {
+    event.respondWith(
+        caches.match(event.request).then(response => {
+
+            // キャッシュにあればそれを返す
+            if (response) {
+                return response;
+            }
+
+            // なければネットから取得
+            return fetch(event.request).then(networkResponse => {
+
+                // キャッシュに保存
+                return caches.open(CACHE_NAME).then(cache => {
+                    cache.put(event.request, networkResponse.clone());
+                    return networkResponse;
+                });
+
+            }).catch(() => {
+                // 完全オフライン時
+                return caches.match("/");
+            });
+
+        })
     );
 });
