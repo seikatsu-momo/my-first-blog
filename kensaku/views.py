@@ -94,3 +94,22 @@ def katasiki_find(request):
         'data':data,
     }
     return render(request,'kensaku/k_find.html',params)
+
+##########
+#service_workerのテンプレ
+##########
+
+from django.http import HttpResponse
+from django.templatetags.static import static
+import requests
+
+def service_worker(request):
+    sw_path = static("serviceworker.js")
+    sw_url = request.build_absolute_uri(sw_path)
+
+    r = requests.get(sw_url)
+
+    return HttpResponse(
+        r.text,
+        content_type="application/javascript"
+    )
