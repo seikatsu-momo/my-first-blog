@@ -1,7 +1,3 @@
-
-
-
-
 //オフラインキャッシュ
 const CACHE_NAME = "kensaku-v1";
 
