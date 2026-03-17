@@ -7,6 +7,10 @@ from .models import Kensaku,Kensaku_Katasiki
 
 # Register your models here.
 
+admin.site.site_header = "浄化槽管理システム"
+admin.site.site_title = "浄化槽管理"
+admin.site.index_title = "管理メニュー"
+
 class KensakuResource(resources.ModelResource):
     class Meta:
         model = Kensaku

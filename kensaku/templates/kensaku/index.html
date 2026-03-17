@@ -2,21 +2,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<link rel="manifest" href="/manifest.json">
-<!--<meta name="theme-color" content="#0d6efd">-->
-
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/static/serviceworker.js');
-    }
-</script>
-
 <head>
     <meta charset="utf-8">
     <title>検索エンジンweb版</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'kensaku/css/style.css' %}">
+    <link rel="stylesheet" href="/static/kensaku/css/bootstrap.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <script src="/static/js/sw-register.js"></script>
+    <!--<meta name="theme-color" content="#0d6efd">-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/serviceworker.js');
+        }
+    </script>
 </head>
 
 <body>
@@ -25,13 +22,17 @@
     </div>
 
     <div class="container" style="display:flex; justify-content:space-around; text-align:center;">
-        <a class="btn btn-primary menu-btn" href="{% url 'find' %}">
-            <span class="glyphicon glyphicon-list-alt icon" style="font-size: 50px; color: white;"></span><br>
+        <a class="btn btn-primary menu-btn text-center p-3"
+            style="display:flex; flex-direction:column; align-items:center; justify-content:center;"
+            href="{% url 'find' %}">
+            <img src="/static/icons/icon-1.png" alt="アイコン" width="50" height="50"><br>
             <span style="font-size: 20px;">所見検索web版</span>
         </a>
 
-        <a class="btn btn-primary" href="{% url 'k_find' %}">
-            <span class="glyphicon glyphicon-picture" style="font-size: 50px; color: white;"></span><br>
+        <a class="btn btn-primary menu-btn text-center p-3"
+            style="display:flex; flex-direction:column; align-items:center; justify-content:center;"
+            href="{% url 'k_find' %}">
+            <img src="/static/icons/icon-2.png" alt="アイコン" width="50" height="50"><br>
             <span style="font-size: 20px;">型式検索web版</span>
         </a>
     </div>
